@@ -1,4 +1,4 @@
-# Flex-landing-page
+# Flex-landing-page-WIP
 
 Codecademy task:
 - Create a new landing page for a fictional company, using flex boxes
