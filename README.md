@@ -9,3 +9,5 @@ Went with a company that supplies spaces for work team meets, gaming or a beer:
  - Added side widget with links to social media. Moves to act as bottom nav bar on smaller screens
  - links all dead
  - images used from - unsplash.com
+
+Maaaaayyyyy have files that are to big or something as it runs slow... whoops
