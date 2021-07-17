@@ -1,0 +1,443 @@
+/* ------------------------ General sets ---------------------------- */
+
+* , a {
+    color:rgb(247, 245, 238);
+    letter-spacing: 0.1rem;
+}
+
+a:hover {
+    color: hsl(36, 100%, 50%);
+}
+
+body {
+    background-image: url(./pictures/bgv5.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.body-overlay {
+    background-color: hsl(0, 0%, 0%, 0.3);
+}
+
+.banner {
+    width: 100%;
+    background-color: hsl(0, 0%, 0%, 0.8);
+}
+
+.banner h2 {
+    text-align: center;
+    padding: 5rem .7rem;
+    font-size: 2rem;
+}
+
+img {
+    width: 100%;
+}
+/* ------------------------ Navbar ---------------------------- */
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: hsl(0, 0%, 0%, 1);
+}
+
+nav .logo {
+    display: inline-block;
+    padding: 1rem 1.4rem;
+}
+
+nav a {  
+    transition: color .2s ease;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem; 
+    font-family: sans-serif;
+}
+
+nav li {
+    padding: 1rem .8rem;
+    transition: color .2s ease;
+}
+
+nav li:hover {
+    color: hsl(36, 100%, 50%)
+}
+
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: auto;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+    background-color: hsl(0, 0%, 0%);
+    height: 0;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.store-drop {
+    top: 3.05rem;
+    right: 9.5rem;
+}
+
+.book-drop {
+    top: 3.05rem;
+    right: 0;
+}
+
+.dropdown-menu li {
+    flex: 1;
+}
+
+.dropdown:hover .store-drop {
+    height: 15.35rem;
+}
+
+.dropdown:hover .book-drop {
+    height: 12.2rem;
+}
+
+.dropdown-menu li:hover {
+    background-color: hsl(36, 100%, 50%, 0.7);
+    color: white;
+}
+
+
+@media only screen and (max-width: 812px) and (orientation: portrait) {
+    nav {
+        flex-direction: column;
+    }
+    nav .logo {
+        padding: 2rem 1.4rem 1rem 1.4rem;
+    }
+    .dropdown-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 7.05rem;
+        right: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+    .dropdown:hover .store-drop {
+        height: 6.15rem;
+    }
+    .dropdown:hover .book-drop {
+        height: 3.1rem;
+    }
+}
+
+/* ------------------------ Socials bar ---------------------------- */
+
+.social-bar {
+    position: fixed;
+    bottom: 10%;
+    left: 1rem;
+    z-index: 10;
+}
+
+.social {
+    padding: 1rem;
+    margin: .2rem 0;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 0%, 0.8);
+    transition: background .3s ease;
+}
+
+.social img {
+    width: 100%;
+}
+
+.social:hover {
+    background: hsl(36, 100%, 50%, 0.7);;
+}
+
+@media only screen and (max-width: 812px) and (orientation: portrait) {
+    .social-bar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+    }
+    .social {
+       padding: 1rem 2rem;
+       border-radius: 15px;
+    }
+}
+
+/* ------------------------ Header ---------------------------- */
+header {
+    position: relative;
+    top: 2rem;
+}
+
+.header {
+   /* background-image: url(../resources/pictures/header.jpg);
+    background-size: cover;
+    background-position: center;  */
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 4rem;
+    padding: 2.5rem 0;
+}
+
+.header p {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+/* ------------------------ Article 1 - Mission ---------------------------- */
+
+.mission-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    max-width: 80rem;
+}
+
+.mission-image {
+    flex: 1;
+    min-width: 25rem;
+    padding: 2.5rem;
+    margin: 2rem 1rem 0rem 1rem;
+}
+
+.mission-image img {
+    border-radius: 15px;
+}
+
+.mission-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 25rem;
+    min-height: 20rem;
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+.mission-text h2 {
+    font-size: 2.5rem;
+    margin-right: auto;
+    padding-right: 20%;
+    border-bottom: 1px solid white;
+}
+
+.mission-text p {
+    font-family: sans-serif;
+}
+
+@media only screen and (max-width: 1100px) {
+    .mission-image {
+        display: none;
+    }
+    .mission-text {
+        text-align: center;
+        padding: 0 1rem;
+        min-height: 25rem;
+    }
+    .mission-text h2 {
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 812px) {
+    .mission-container {
+        justify-content: center;
+    }
+}
+
+/* ------------------------ Article 2 - Product Image container ---------------------------- */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 1rem;
+    height:25rem;
+    min-width: 15rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px 4px rgba(0,0,0,0.7);
+    transition: box-shadow .3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 4px rgba(0,0,0,0.9);
+  }
+
+  .card:hover .card-text h3, 
+  .card:hover .card-text p {
+        color: hsl(36, 100%, 50%);
+        border-color: hsl(36, 100%, 50%);;
+  }
+
+.card:nth-child(1) {
+    flex: 3;
+}
+
+.card:nth-child(3n) {
+    flex: 2;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    padding: .5rem;
+    font-family: sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 30%, rgb(0, 0, 0));
+}
+
+.card h3 {
+    margin-right: auto;
+    font-size: 1.4rem;
+    padding: .4rem 2.5rem .4rem 0;
+    border-bottom: 1px solid white;
+    transition: color .4s ease, border-color .4s ease;
+}
+
+.card p {
+    font-size: 0.9rem;
+    padding: 1.5rem 0;
+    transition: color .4s ease;
+}
+
+
+.a {
+    background-image: url('../resources/pictures/bar.jpg');
+}
+.b {
+    background-image: url('../resources/pictures/coffee.jpg');
+}
+.c {
+    background-image: url('../resources/pictures/collab1.jpg');
+}
+.d {
+    background-image: url('../resources/pictures/teamgames.jpg');
+}
+.e {
+    background-image: url('../resources/pictures/vr.jpg');
+}
+.f {
+    background-image: url('../resources/pictures/xbox.jpg');
+}
+.g {
+    background-image: url('../resources/pictures/work.jpg');
+}
+.h {
+    background-image: url('../resources/pictures/worksupplies.jpg');
+}
+.i {
+    background-image: url('../resources/pictures/designsupplies.jpg');
+}
+/* ------------------------ Article 3 - Meet the team ---------------------------- */
+
+.people-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.staff-card {
+    max-width: 17rem;
+}
+
+.staff-card img {
+    height: 26rem;
+}
+
+.name {
+    position: absolute;
+    margin-top: 2.5rem;
+    padding: 1rem 6rem 1rem 2rem;
+    border-radius: 0 20px 20px 0;
+    background: linear-gradient(to right, hsl(0, 0%, 0%, 1), hsl(0, 0%, 0%, 0.1) );
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color:rgb(247, 245, 238);
+    letter-spacing: 1.1;
+}
+
+
+@media only screen and (max-width: 580px) {
+    .people-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .staff-card {
+        flex: 1 1 45%;
+    }
+}
+
+/* ------------------------ Article 4 - Testomonials ---------------------------- */
+
+.reviews {
+    width: 100%;
+    height: 60vh;
+}
+
+/* ------------------------ Footer ---------------------------- */
+
+footer {
+    width: 100%;
+    background-color: hsl(0, 0%, 0%, 0.8);
+}
+
+footer p {
+    text-align: center;
+    padding-bottom: 2rem;
+    line-height: 2rem;
+    text-decoration: underline;
+}
+
+.sources {
+    padding: 2rem;
+}
