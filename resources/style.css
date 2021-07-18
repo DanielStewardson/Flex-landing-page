@@ -108,7 +108,7 @@ img {
     cursor: pointer;
 }
 
-/* .dropdown:hover .store-drop, */
+.dropdown:hover .store-drop,
 .dropdown:active .store-drop {
     height: 15.35rem;
 }
