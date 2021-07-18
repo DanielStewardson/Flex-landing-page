@@ -152,12 +152,14 @@ img {
         overflow: hidden;
     }
     .dropdown:hover .store-drop,
-    .dropdown:active .store-drop {
+    .dropdown:focus .store-drop {
         height: 6.15rem;
+        outline: none;
     }
     .dropdown:hover .book-drop,
     .dropdown:focus .book-drop {
         height: 6.15rem;
+        outline: none;
     }
 }
 
