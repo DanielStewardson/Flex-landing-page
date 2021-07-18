@@ -31,6 +31,13 @@ body {
     font-size: 2rem;
 }
 
+@media only screen and (max-width: 812px) {
+    .banner h2 {
+        font-size: 1.2rem;
+        padding: 1.5rem .7rem;
+    }
+}
+
 img {
     width: 100%;
 }
@@ -96,7 +103,13 @@ img {
     flex: 1;
 }
 
-.dropdown:hover .store-drop {
+.pc-nav li:hover {
+    color: hsl(36, 100%, 50%);
+    cursor: pointer;
+}
+
+/* .dropdown:hover .store-drop, */
+.dropdown:active .store-drop {
     height: 15.35rem;
 }
 
@@ -114,8 +127,6 @@ img {
         display: none;
     }
     .sticky-logo {
-        /* position: relative;
-        top: 3rem; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -140,10 +151,12 @@ img {
         width: 100%;
         overflow: hidden;
     }
-    .dropdown:hover .store-drop {
+    .dropdown:hover .store-drop,
+    .dropdown:active .store-drop {
         height: 6.15rem;
     }
-    .dropdown:hover .book-drop {
+    .dropdown:hover .book-drop,
+    .dropdown:focus .book-drop {
         height: 6.15rem;
     }
 }
@@ -309,13 +322,12 @@ header {
 }
 
 .card {
-    flex: 1;
+    flex-grow: 1;
+    flex-basis: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     margin: 1rem;
-    height:25rem;
-    min-width: 15rem;
     border-radius: 10px;
     overflow: hidden;
     background-size: cover;
@@ -335,21 +347,22 @@ header {
   }
 
 .card:nth-child(1) {
-    flex: 3;
+    flex-grow: 4;
 }
 
 .card:nth-child(3n) {
-    flex: 2;
+    flex-grow: 5;
 }
 
 .card-text {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 50%;
-    padding: .6rem;
+    padding: 15rem .6rem .6rem .6rem;
     font-family: sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 30%, rgb(0, 0, 0, 1));
+    background: linear-gradient(rgba(250, 0, 0, 0), 
+    rgba(14, 0, 90, 0) 45%,
+    rgb(0, 0, 0, 1)  );
 }
 
 .card h3 {
@@ -397,7 +410,6 @@ header {
 
 .people-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     max-width: 80rem;
@@ -406,7 +418,7 @@ header {
 
 .staff-card {
     flex: 1;
-    width: 17rem;
+    /* width: 17rem; */
 }
 .staff-card img {
     width: 100%;
