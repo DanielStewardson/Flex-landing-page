@@ -10,7 +10,7 @@ a:hover {
 }
 
 body {
-    background-image: url(./pictures/bgv5.jpg);
+    background-image: url(./pictures/bgv1.jpg);
     background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
@@ -27,7 +27,7 @@ body {
 
 .banner h2 {
     text-align: center;
-    padding: 5rem .7rem;
+    padding: 3rem .7rem;
     font-size: 2rem;
 }
 
@@ -109,19 +109,19 @@ img {
     color: white;
 }
 
-
 @media only screen and (max-width: 812px) and (orientation: portrait) {
     .logo {
         display: none;
     }
     .sticky-logo {
-        position: relative;
-        top: 3rem;
+        /* position: relative;
+        top: 3rem; */
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 8rem;
+        padding-top: 3rem;
         z-index: 2;
         cursor: pointer;
         background-color: black;
@@ -220,6 +220,15 @@ header {
     text-align: center;
 }
 
+@media only screen and (max-width: 812px) {
+    .header h1 {
+        font-size: 3rem;
+    }
+    .header p {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* ------------------------ Article 1 - Mission ---------------------------- */
 
@@ -251,14 +260,16 @@ header {
 }
 
 .mission-text h2 {
-    font-size: 2.5rem;
-    margin-right: auto;
-    padding-right: 20%;
+    font-size: 2.3rem;
     border-bottom: 1px solid white;
+    text-align: center;
 }
 
 .mission-text p {
+    font-size: 1rem;
+    line-height: 1.2;
     font-family: sans-serif;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -277,7 +288,12 @@ header {
 }
 
 @media only screen and (max-width: 812px) {
-
+    .mission-text h2 {
+        font-size: 2rem;
+    }
+    .extra-missoin-text {
+        display: none;
+    }
 }
 
 /* ------------------------ Article 2 - Product Image container ---------------------------- */
@@ -329,9 +345,9 @@ header {
 .card-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 40%;
-    padding: .5rem;
+    justify-content: flex-end;
+    height: 50%;
+    padding: .6rem;
     font-family: sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 30%, rgb(0, 0, 0, 1));
 }
@@ -339,17 +355,16 @@ header {
 .card h3 {
     margin-right: auto;
     font-size: 1.4rem;
-    padding: .4rem 2.5rem .4rem 0;
+    padding-bottom: .5rem;
     border-bottom: 1px solid white;
     transition: color .4s ease, border-color .4s ease;
 }
 
 .card p {
-    font-size: 0.9rem;
-    padding: 1.5rem 0;
+    font-size: 0.8rem;
+    padding: 1rem 0;
     transition: color .4s ease;
 }
-
 
 .a {
     background-image: url('../resources/pictures/bar.jpg');
@@ -376,7 +391,7 @@ header {
     background-image: url('../resources/pictures/worksupplies.jpg');
 }
 .i {
-    background-image: url('../resources/pictures/designsupplies.jpg');
+    background-image: url('../resources/pictures/designsupplies2.jpg');
 }
 /* ------------------------ Article 3 - Meet the team ---------------------------- */
 
@@ -390,17 +405,16 @@ header {
 }
 
 .staff-card {
-    max-width: 17rem;
+    flex: 1;
+    width: 17rem;
 }
-
 .staff-card img {
-    height: 26rem;
+    width: 100%;
 }
-
 .name {
     position: absolute;
-    margin-top: 2.5rem;
-    padding: 1rem 6rem 1rem 2rem;
+    margin-top: 2%;
+    padding: 1.5% 8% 1.5% 1.5%;
     border-radius: 0 20px 20px 0;
     background: linear-gradient(to right, hsl(0, 0%, 0%, 1), hsl(0, 0%, 0%, 0.1) );
     font-size: 1.3rem;
@@ -412,11 +426,10 @@ header {
 
 @media only screen and (max-width: 580px) {
     .people-container {
-        flex-direction: column;
-        align-items: center;
+        
     }
     .staff-card {
-        flex: 1 1 45%;
+        
     }
 }
 
@@ -442,5 +455,5 @@ footer p {
 }
 
 .sources {
-    padding: 2rem;
+    padding: 4rem 2rem;
 }
